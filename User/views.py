@@ -7,11 +7,11 @@ def addShowStudent(request):
       fm=UserRegistration(request.POST)
       if fm.is_valid():
          nm=fm.cleaned_data['name']
-         print(nm)
+         # print(nm)
          em=fm.cleaned_data['email']
-         print(em)
+         # print(em)
          pw=fm.cleaned_data['password']
-         print(pw)
+         # print(pw)
 
          reg=User(name=nm,email=em,password=pw)
          reg.save()
